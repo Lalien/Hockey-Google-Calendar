@@ -4,6 +4,8 @@ require golang.org/x/net v0.0.0-20220107192237-5cfca573fb4d // indirect
 
 require github.com/golang/protobuf v1.5.2 // indirect
 
+require github.com/Lalien/hockey-calendar/calendar v0.0.0-00010101000000-000000000000
+
 require google.golang.org/protobuf v1.27.1 // indirect
 
 require (
@@ -19,6 +21,8 @@ require (
 	google.golang.org/grpc v1.43.0 // indirect
 )
 
-module sportstable-calendar/calendar
+module github.com/Lalien/hockey-calendar/main
 
 go 1.17
+
+replace github.com/Lalien/hockey-calendar/calendar => ..\calendar

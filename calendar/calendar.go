@@ -1,5 +1,13 @@
 package calendar
 
-func Hello() string {
-	return "aaaa"
+import (
+	"fmt"
+)
+
+type CalendarEntry struct {
+	Testing string
+}
+
+func (x CalendarEntry) Connect() {
+	fmt.Println(x.Testing)
 }

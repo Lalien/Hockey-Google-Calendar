@@ -10,6 +10,7 @@ import (
 	"os"
 	"time"
 
+	hockeyCalendar "github.com/Lalien/hockey-calendar/calendar"
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/google"
 	"google.golang.org/api/calendar/v3"
@@ -21,6 +22,10 @@ func getClient(config *oauth2.Config) *http.Client {
 	// The file token.json stores the user's access and refresh tokens, and is
 	// created automatically when the authorization flow completes for the first
 	// time.
+
+	calendarEntry := hockeyCalendar.CalendarEntry{Testing: "hello"}
+	calendarEntry.Connect()
+
 	tokFile := "token.json"
 
 	tok, err := tokenFromFile(tokFile)
